@@ -8,17 +8,31 @@ return product;
 }
 ```
 Output:
+
 In: {}
-Unit: return product
-Out :{product}
-In: {product}
-Unit: product = x * a
-Out :{product, x, a}
-In: {product, x, a}
-Unit: a = 10
-Out :{product, x}
+
+Unit: return product 
+
+Out :{product} 
+
+In: {product} 
+
+Unit: product = x * a 
+
+Out :{product, x, a} 
+
+In: {product, x, a} 
+
+Unit: a = 10 
+
+Out :{product, x} 
+
 In: {product, x}
+
 Unit: x := @parameter0: int
+
 Out :{product, x}
+
 //Sinks depend on parameter (source):
+
 x
