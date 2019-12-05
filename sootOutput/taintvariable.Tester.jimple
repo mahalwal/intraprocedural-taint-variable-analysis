@@ -1,0 +1,66 @@
+public class taintvariable.Tester extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        taintvariable.Tester this;
+
+        this := @this: taintvariable.Tester;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    static int foo(int)
+    {
+        int z, x, y;
+        java.io.PrintStream $r0;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2, $r3;
+
+        z := @parameter0: int;
+        x = 22;
+        y = 12;
+        if x >= 10 goto label3;
+
+        goto label1;
+
+     label0:
+        x = x + z;
+        x = x + 1;
+
+     label1:
+        if x < 20 goto label0;
+
+        goto label4;
+
+     label2:
+        y = y + 1;
+
+     label3:
+        if x < 10 goto label2;
+
+     label4:
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        $r1 = new java.lang.StringBuilder;
+        $r2 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>(x);
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>(java.lang.String)>($r2);
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(y);
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>($r3);
+        return x;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int val;
+        java.io.PrintStream $r0;
+
+        args := @parameter0: java.lang.String[];
+        val = staticinvoke <taintvariable.Tester: int foo(int)>(5);
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void println(int)>(val);
+        return;
+    }
+}
